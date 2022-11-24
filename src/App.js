@@ -6,8 +6,11 @@ import './App.css';
 import PubSub from 'pubsub-js';
 import context from './components/context';
 
+
 export default class App extends Component {
   state = {
+    //localStorage:是永久性存储，关闭浏览器再打开也不会丢失之前的数据，除非主动删除  getItem(key)
+    //JSON.parse将响应体字符串解析为js对象或数组的函数
     datas: JSON.parse(localStorage.getItem('datas')) || [],
     id: undefined,
   };
